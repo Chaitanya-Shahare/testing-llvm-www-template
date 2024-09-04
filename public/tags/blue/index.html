@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html
+  lang="en-us"
+  dir="ltr"
+>
+
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>blue | My New Hugo Site</title>
+<link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+
+      <link rel="stylesheet" href="/scss/main.min.91afca853a6465b704932a3a77db57382d931cdd08318300fcbc18173114e623.min.91afca853a6465b704932a3a77db57382d931cdd08318300fcbc18173114e623.css" integrity="sha256-ka/KhTpkZbcEkyo6d9tXOC2THN0IMYMA/LwYFzEU5iM=" crossorigin="anonymous">
+
+
+      <script src="/js/main.811ec74af5027eb0507ad51658373038eabdfbb3c42f44ee0306d7d2228b8aa0.js" integrity="sha256-gR7HSvUCfrBQetUWWDcwOOq9&#43;7PEL0TuAwbX0iKLiqA=" crossorigin="anonymous"></script>
+
+
+  </head>
+
+  <body>
+
+    <nav class="navbar">
+    <span id="nav-label" hidden>Navigation</span>
+    <div class="navbar__container">
+        <a href="https://example.org/">
+            <div class="navbar__logo">
+                <img src="/images/logo.png" alt="logo">
+            </div>
+        </a>
+
+        <button id="navbarToggle" class="navbar__toggle" aria-expanded="false" aria-labelledby="nav-label">
+            <i class="ri-menu-line"></i>
+        </button>
+
+        <div class="navbar__menu" role="dialog" aria-labelledby="nav-label">
+            <button class="navbar__close" id="navbarClose" aria-label="Close">
+                <i class="ri-close-line"></i>
+            </button>
+            <ul class="navbar__links">
+                
+                
+                    <li class="navbar__item"><a href="/" class="navbar__link">Getting Started</a></li>
+                
+                    <li class="navbar__item"><a href="/" class="navbar__link">Docs</a></li>
+                
+                    <li class="navbar__item"><a href="/" class="navbar__link">Blogs</a></li>
+                
+                    <li class="navbar__item"><a href="/" class="navbar__link">Resources</a></li>
+                
+                    <li class="navbar__item"><a href="/" class="navbar__link">Downloads</a></li>
+                
+            </ul>
+        </div>
+
+        <button class="navbar__theme-toggle-button" id="themeSwitcher">
+            <i class="ri-sun-line"></i>
+        </button>
+    </div>
+</nav>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const navbarToggle = document.getElementById("navbarToggle");
+  const navbarClose = document.getElementById("navbarClose");
+  const navbarMenu = document.querySelector(".navbar__menu");
+
+  navbarToggle.addEventListener("click", function () {
+    const expanded =
+      navbarToggle.getAttribute("aria-expanded") === "true" || false;
+    navbarToggle.setAttribute("aria-expanded", !expanded);
+    navbarMenu.classList.toggle("active");
+  });
+
+  navbarClose.addEventListener("click", function () {
+    navbarToggle.setAttribute("aria-expanded", false);
+    navbarMenu.classList.remove("active");
+  });
+});
+
+</script>
+
+    <main>
+  <h1>blue</h1>
+  
+  
+    <h2><a href="/posts/post-3/">Post 3</a></h2>
+    Occaecat aliqua consequat laborum ut ex aute aliqua culpa quis irure esse magna dolore quis. Proident fugiat labore eu laboris officia Lorem enim. Ipsum occaecat cillum ut tempor id sint aliqua incididunt nisi incididunt reprehenderit. Voluptate ad minim sint est aute aliquip esse occaecat tempor officia qui sunt. Aute ex ipsum id ut in est velit est laborum incididunt. Aliqua qui id do esse sunt eiusmod id deserunt eu nostrud aute sit ipsum.
+  
+</main>
+
+    <footer class="footer">
+  <div class="container footer__container">
+  <div class="footer__title">
+    <h3>The LLVM Compiler Infrastructure</h3>
+  </div>
+    <div class="footer__col-wrapper">
+    <div class="footer__col">
+      <h4>LLVM</h4>
+      <ul>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Documentation</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Resources</a></li>
+        <li><a href="#">Download</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4>Dev. Resources</h4>
+      <ul>
+        <li><a href="#">Doxygen</a></li>
+        <li><a href="#">Sources (GitHub)</a></li>
+        <li><a href="#">Code Review</a></li>
+        <li><a href="#">Bug Tracker</a></li>
+        <li><a href="#">Green Dragon</a></li>
+        <li><a href="#">LNT</a></li>
+        <li><a href="#">Scan Build</a></li>
+        <li><a href="#">llvm-cov</a></li>
+        <li><a href="#">Compile-time tracker</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4>About LLVM</h4>
+      <ul>
+        <li><a href="#">LLVM Foundation</a></li>
+        <li><a href="#">LLVM Community Calendar</a></li>
+        <li><a href="#">Mailing LIsts</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+
+</html>
