@@ -1,0 +1,21 @@
+name: Hugo Link Check
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  linkcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Filter to PR opened or synchronized
+        uses: actions/bin/filter@master
+        id: filter
+        with:
+          args: "action 'opened|synchronize'"
+
+      - name: Check Links
+        uses: marccampbell/hugo-linkcheck-action@v0.1.3
+        env:
+          HUGO_FINAL_URL: https://chaitanyashahare.com/testing-llvm-www-template/        # with:
+        #   secrets: ${{ secrets.GITHUB_TOKEN }}
