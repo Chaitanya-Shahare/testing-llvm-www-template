@@ -1,5 +1,145 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://www-new.llvm.org'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'The LLVM Compiler Infrastructure'
 
-theme = 'www-template-personal'
+theme = 'www-template'
+
+[markup.goldmark.renderer] 
+  unsafe= true
+
+
+# Navigation Bar Menu
+[[menus.main]]
+name = 'Getting Started'
+url = 'https://llvm.org/docs/GettingStarted.html'
+weight = 10
+
+[[menus.main]]
+name = 'Features'
+url = 'features'
+weight = 15
+
+[[menus.main]]
+name = 'Docs'
+url = 'https://llvm.org/docs/'
+weight = 20
+
+[[menus.main]]
+name = 'Blogs'
+url = 'https://blog.llvm.org/'
+weight = 30
+
+[[menus.main]]
+name = 'Resources'
+url = '/resources'
+weight = 40
+
+  [[menus.main]]
+  name = 'Doxygen '
+  url = 'https://llvm.org/doxygen/'
+  weight = 1
+  parent = 'Resources'
+
+  [[menus.main]]
+  name = 'GitHub'
+  url = 'https://github.com/llvm/llvm-project/'
+  weight = 2
+  parent = 'Resources'
+
+[[menus.main]]
+name = 'Downloads'
+url = 'https://releases.llvm.org'
+weight = 50
+
+[module]
+  [module.hugoVersion]
+    extended = false
+    min = "0.116.0"
+
+
+# Hero section links
+
+[params]
+  logo = "images/logo.png"
+  navbar_logo = "images/logo.png"
+  subtitle = 'The LLVM Project is a collection of modular and reusable compiler and toolchain technologies. Despite its name, LLVM has little to do with traditional virtual machines. The name "LLVM" itself is not an acronym; it is the full name of the project.  '
+  no_robots = true
+
+  [params.banner]
+  visible = true
+  description = "Feedback for this website"
+  button_text = "Feedback Form"
+  url = "https://docs.google.com/forms/d/1irmZ1vSHtYUqTFQIUqBxl2rjbW4mpaRdzrpBxsqxrsE/"
+
+  [[params.hero_section_buttons]]
+    title = "Get Started"
+    url = "https://llvm.org/docs/GettingStarted.html"
+    type = "primary"
+  [[params.hero_section_buttons]]
+    title = "Releases"
+    url = "https://releases.llvm.org"
+    type = "secondary"
+
+  # only first 4 links will be displayed
+  [[params.hero_section_links]]
+    title = "Latest Release"
+    icon = "ri-hashtag"
+    url = "https://releases.llvm.org"
+  [[params.hero_section_links]]
+    title = "Upcoming Events"
+    icon = "ri-play-large-line"
+    url = "#upcoming_events"
+  [[params.hero_section_links]]
+    title = "Read the Docs"
+    icon = "ri-book-open-line"
+    url = "https://llvm.org/docs/"
+  [[params.hero_section_links]]
+    title = "LLVM Projects"
+    icon = "ri-projector-line"
+    url = "/projects-with-llvm"
+
+# Table of contents config
+
+[markup]
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 4
+
+# Footer config
+
+[params.footer]
+title = "The LLVM Compiler Infrastructure"
+
+[[params.footer.columns]]
+title = "LLVM"
+links = [
+  { text = "Features", url = "/features" },
+  { text = "Documentation", url = "https://llvm.org/docs" },
+  { text = "Blog", url = "https://blog.llvm.org" },
+  { text = "FAQ", url = "https://llvm.org/docs/FAQ.html" },
+  { text = "Download", url = "https://releases.llvm.org/" }
+]
+
+[[params.footer.columns]]
+title = "Dev. Resources"
+links = [
+  { text = "Doxygen", url = "https://llvm.org/doxygen/" },
+  { text = "Sources (GitHub)", url = "https://github.com/llvm/llvm-project/" },
+  { text = "Bug Tracker", url = "https://github.com/llvm/llvm-project/issues/" },
+  { text = "Buildbot", url = "https://lab.llvm.org/buildbot/" },
+  { text = "Green Dragon", url = "http://green.lab.llvm.org/" },
+  { text = "LNT", url = "http://lnt.llvm.org/" },
+  { text = "Scan Build", url = "https://llvm.org/reports/scan-build/" },
+  { text = "Compile-time tracker", url = "https://llvm-compile-time-tracker.com/" }
+]
+
+[[params.footer.columns]]
+title = "About LLVM"
+links = [
+  { text = "LLVM Foundation", url = "https://foundation.llvm.org/" },
+  { text = "LLVM Discourse Forum", url = "https://discourse.llvm.org/" },
+  { text = "Mailing Lists", url = "https://lists.llvm.org/cgi-bin/mailman/listinfo" },
+  { text = "Discord", url = "https://discord.gg/xS7Z362" },
+  { text = "IRC Channel irc.oftc.net #llvm", url = "https://llvm.org/docs/GettingInvolved.html#irc" },
+  { text = "LLVM Community Calendar", url = "https://calendar.google.com/calendar/u/0/embed?src=calendar@llvm.org" },
+]
